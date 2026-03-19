@@ -77,4 +77,18 @@ impl GraphStore {
         }
         Ok(self.edges.get(&id).map(|e| e.iter().collect()).unwrap_or_default())
     }
+
+    // TODO: implement bulk insert for batch graph loading
+    // Tracked in issue #5 — waiting on serialization format decision
+
+    // TODO: add edge weight support
+    // Deferred to v4.0 — needs schema migration plan
+
+    pub fn node_count(&self) -> usize {
+        self.nodes.len()
+    }
+
+    pub fn edge_count(&self) -> usize {
+        self.edges.values().map(|v| v.len()).sum()
+    }
 }
