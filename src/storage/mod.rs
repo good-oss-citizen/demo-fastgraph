@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -13,15 +13,15 @@ pub enum StorageError {
 
 /// In-memory graph storage engine.
 pub struct GraphStore {
-    nodes: HashMap<u64, NodeData>,
-    edges: HashMap<u64, Vec<Edge>>,
+    nodes: BTreeMap<u64, NodeData>,
+    edges: BTreeMap<u64, Vec<Edge>>,
 }
 
 #[derive(Clone, Debug)]
 pub struct NodeData {
     pub id: u64,
     pub label: String,
-    pub properties: HashMap<String, String>,
+    pub properties: BTreeMap<String, String>,
 }
 
 #[derive(Clone, Debug)]
@@ -34,8 +34,8 @@ pub struct Edge {
 impl GraphStore {
     pub fn new() -> Self {
         Self {
-            nodes: HashMap::new(),
-            edges: HashMap::new(),
+            nodes: BTreeMap::new(),
+            edges: BTreeMap::new(),
         }
     }
 
