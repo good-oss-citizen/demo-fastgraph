@@ -21,4 +21,4 @@ Include the issue number in the commit body when applicable.
 All PRs require at least one approval from a maintainer. Core subsystem changes
 (storage engine, query planner) require two approvals.
 
-See our Code of Conduct for community standards, including our policy on AI-generated contributions.
+Please review our Code of Conduct before contributing.
