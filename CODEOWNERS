@@ -1,0 +1,8 @@
+# Storage engine
+/src/storage/    @core-team @storage-lead
+
+# Query planner
+/src/planner/    @core-team @query-lead
+
+# Documentation
+/docs/           @docs-team
