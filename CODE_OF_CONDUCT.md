@@ -27,9 +27,6 @@ This policy exists because:
 - A note on the contributor's record
 - Repeat violations: permanent ban from the project
 
-If you are unsure whether your workflow involves AI-generated content, ask in
-#contributing on our Discord before submitting.
-
 ## Reporting
 
 Report Code of Conduct violations to conduct@fastgraph.dev.
